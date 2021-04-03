@@ -2,7 +2,7 @@ const textBox = document.getElementById('expression');
 const output = document.getElementById('result');
 
 const symbols = ['+','-','/','*','.'];
-textBox.addEventListener('keyup', keyboardInput);
+textBox.addEventListener('keydown', keyboardInput);
 
 function reset(){
     textBox.value='';

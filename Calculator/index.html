@@ -9,8 +9,10 @@
 </head>
 <body>
     <div id="calculator">
-        <div id="result"></div>
-        <input type="text" id="expression" readonly autofocus>
+        <div id="result">
+            
+        </div>
+        <input type="text" id="expression" readonly autofocus onblur="this.focus()">
         <table>
             <tr>
                 <td><button onclick={takeInput(7)}>7</button></td>

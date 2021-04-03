@@ -14,8 +14,13 @@
     width: 100%;
     height:50px;
     text-align: end;
-    
+    padding-right: 3px;
+    box-sizing: border-box;
 }
+#result{
+    padding-top: 10px;
+}
+
 #expression{
     height:40px;
     box-sizing: border-box;
