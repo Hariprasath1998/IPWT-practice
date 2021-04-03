@@ -7,7 +7,6 @@ textBox.addEventListener('keyup', keyboardInput);
 function reset(){
     textBox.value='';
     output.innerHTML='';
-    console.log('dumuk');
 }
 
 function keyboardInput(e){
@@ -18,6 +17,7 @@ function keyboardInput(e){
 
 function takeInput(input){
     if(!isNaN(input)){
+        textBoxLength=textBox.value.length;
         textBox.value += input;
     }else if(symbols.includes(input)){
         let expression = textBox.value;
