@@ -1,30 +1,39 @@
-const input = document.getElementById('expression');
+const textBox = document.getElementById('expression');
 const output = document.getElementById('result');
 
-const symbols=['+','-','/','*','.'];
+const symbols = ['+','-','/','*','.'];
+textBox.addEventListener('keyup', keyboardInput);
 
-input.addEventListener('keyup',checkInput);
+function reset(){
+    textBox.value='';
+    output.innerHTML='';
+    console.log('dumuk');
+}
 
-function checkInput(e){
-    let inputValue = e.key;
-    if(!isNaN(inputValue)){
-        input.value += inputValue;
-    }else if(symbols.includes(inputValue)){
-        let expression=input.value;
+function keyboardInput(e){
+    const input = e.key;
+    takeInput(input);
+}
+
+
+function takeInput(input){
+    if(!isNaN(input)){
+        textBox.value += input;
+    }else if(symbols.includes(input)){
+        let expression = textBox.value;
         if(expression.length !== 0){
             if(symbols.includes(expression[expression.length - 1])){
-                expression=expression.slice(0,-1);
+                expression = expression.slice(0,-1);
             };
-            input.value=expression+inputValue;        
+            textBox.value = expression+input;        
         }
         
-    }else if(e.key === 'Backspace'){
-        let expression = e.target.value;
+    }else if(input === 'Backspace'){
+        let expression = textBox.value;
         expression = expression.slice(0,-1);
-        e.target.value = expression;
+        textBox.value = expression;
     }
-    calculate(e.target.value);
-    console.log(e);
+    calculate(textBox.value);
 }
 
 
@@ -32,15 +41,15 @@ function calculate (expression) {
     if(expression){
         try{
             var result = eval(expression);
-            output.innerText=result;
+            output.innerText = result;
         }catch(err){
-    
+
         }
         finally{
             
         }
     
+    }else{
+        reset();
     }
-    
-    
 };

@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#calculator{
+    border: rgba(10,10,50,0.5) 10px solid;
+    width: fit-content;
+    margin: auto;
+    margin-top: 150px;
+    box-sizing: border-box;
+}
+#result,#expression{
+    width: 100%;
+    height:50px;
+    text-align: end;
+    
+}
+#expression{
+    height:40px;
+    box-sizing: border-box;
+    border-left: none;
+    border-right: none;    
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    outline:none;
+}
+
+td button{
+    font-size: 1.0rem;
+    border:none;
+    outline:none;
+    height: 50px;
+    width: 70px;
+}
