@@ -18,25 +18,25 @@
                 <td><button onclick={takeInput(7)}>7</button></td>
                 <td><button onclick={takeInput(8)}>8</button></td>
                 <td><button onclick={takeInput(9)}>9</button></td>
-                <td><button onclick={reset()}>CE</button></td>
+                <td><button onclick={reset()} class="red">CE</button></td>
             </tr>
             <tr>
                 <td><button onclick={takeInput(4)}>4</button></td>
                 <td><button onclick={takeInput(5)}>5</button></td>
                 <td><button onclick={takeInput(6)}>6</button></td>
-                <td><button onclick={takeInput('/')}>/</button></td>
+                <td><button class="operators" onclick="takeInput('/')">/</button></td>
             </tr>
             <tr>
                 <td><button onclick={takeInput(1)}>1</button></td>
                 <td><button onclick={takeInput(2)}>2</button></td>
                 <td><button onclick={takeInput(3)}>3</button></td>
-                <td><button onclick={takeInput('*')}>*</button></td>
+                <td><button onclick="takeInput('*')" class="operators">*</button></td>
             </tr>
             <tr>
                 <td><button onclick={takeInput(0)}>0</button></td>
-                <td><button onclick={takeInput('.')}>.</button></td>
-                <td><button onclick={takeInput('+')}>+</button></td>
-                <td><button onclick={takeInput('-')}>-</button></td>
+                <td><button onclick="takeInput('.')" class="operators">.</button></td>
+                <td><button onclick="takeInput('+')" class="operators">+</button></td>
+                <td><button onclick="takeInput('-')" class="operators">-</button></td>
             </tr>
         </table>
     </div>
