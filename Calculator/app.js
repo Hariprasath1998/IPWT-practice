@@ -11,6 +11,7 @@ function reset(){
 
 function keyboardInput(e){
     const input = e.key;
+    
     takeInput(input);
 }
 
