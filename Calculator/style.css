@@ -23,6 +23,7 @@
     box-sizing: border-box;
 }
 #result{
+    opacity: 40%;
     padding-top: 10px;
     font-size: 1.2rem;
 }
